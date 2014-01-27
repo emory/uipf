@@ -1,0 +1,10 @@
+pass in  proto {tcp udp} from <UCC-NET> to any  port { 137 138 139 445  }  flags S/SA keep state 
+pass in  proto tcp from <UCC-NET> to any  port { 5900 88 5800 6129 3389 80 443  }  flags S/SA keep state 
+pass in  proto udp from <UCC-NET> to any  port { 5353  }  keep state 
+pass in  proto {tcp udp} from <UIOWA-NETS> to any  port { 53 67 68 123 389 636 5353 5354 5522 53 3283 5988  }  flags S/SA keep state 
+pass in  proto tcp from <UIOWA-NETS> to any  port { 5900 88 5800 6129 3389  }  flags S/SA keep state 
+pass in  proto {tcp udp} from <_any> to any  port { 5522 16403:16472 16393:16402 16384:16403 3261 5190 5222 5269 5297 5298 5678 7777  }  flags S/SA keep state 
+pass in  proto esp from <_any> to any  keep state 
+pass in  proto gre from <_any> to any  keep state 
+pass in  proto tcp from <_any> to any  port { 548 88 1723 22 5223  }  flags S/SA keep state 
+pass in  proto udp from <_any> to any  port { 500 1701 4500  }  keep state 

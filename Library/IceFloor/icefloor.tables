@@ -1,0 +1,7 @@
+table <UCC-NET> {128.255.76.0/23 } persist
+table <UIOWA-NETS> {128.255.0.0/16 129.255.0.0/16 172.16.0.0/12 38.124.80.0/29 2620:0:e50:6802::/64 fd9a:2c75:7d0c::/48 } persist
+table <_any> {0.0.0.0/0 ::/0 } persist
+table <_blacklist> {} persist
+table <_outbound> {0.0.0.0/0 ::/0 } persist
+table <_outbound_egress> {128.255.76.130 } persist
+table <_outbound_nat> {} persist
