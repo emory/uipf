@@ -8,7 +8,7 @@ You'll find the rules and tables I've defined for routable and non-routable addr
 
 Installing IceFloor will do that for you once you run it the first time and answer some questions, then you can insert my files or updated versions of your own. If this ever ends up being something more rigorously maintained I'll probably create a script to merge my recommended networks and tables into an existing policy. 
 
-The stuff you probably care about are the defined networks and services. `paris` is an OS X Server host and runs an ssh daemon on an alternate port [^highport]. It also uses multi-factor authentication for ssh connections but I don't filter outgoing traffic, only incoming, so it doesn't require anything special for that.
+The stuff you probably care about are the defined networks and services. `paris` is an OS X Server host and runs an ssh daemon on an alternate port [^1]. It also uses multi-factor authentication for ssh connections but I don't filter outgoing traffic, only incoming, so it doesn't require anything special for that.
 
 
 ## NOTE
@@ -18,5 +18,6 @@ The stuff you probably care about are the defined networks and services. `paris`
 In `icefloor.tables` the table named `<_outbound_egress>` is defined as my local interface's ipv4 address for `paris.its`. You should make that match your own especially if you plan on doing anything with dummynet, monkeying with NAT or rate shaping, etc.
 
 
+----
 
-[^highport]: I wrote about using alternate ports with ssh(1) if you're interested: [@incumbent.org](http://incumbent.org/post/alternate-ssh-for-osx/)
+[^1]: I wrote about using alternate ports with ssh(1) if you're interested: [@incumbent.org](http://incumbent.org/post/alternate-ssh-for-osx/)
